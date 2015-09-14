@@ -1,0 +1,103 @@
+Use command line to create a new repository...
+
+echo # My Project >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@git.assembla.com:one-for-all.git
+git push -u origin master
+Use command line to push an existing repository...
+
+
+echo # My Project >> README.md
+git remote add origin git@git.assembla.com:one-for-all.git
+git push -u origin master
+Getting started with Git
+
+1. Installing a Git client
+
+You need to download and install a Git client before you can start using Git on your local computer.
+
+Mac OSX
+Download and run git-osx-installer 
+Or install from sources. Install Xcode tools from OSX DVD, then use HomeBrew to install git:
+
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+brew install git
+        
+Debian-Ubuntu
+apt-get install git
+Windows
+Download msysgit installation and follow the steps.
+
+BSD
+cd /usr/ports/devel/git
+make
+make install
+        
+2. Set up your email in Git
+
+Add your name and your email in your Git user settings. Your username will appear on commits, stream and ticket comments generated from commits. Make sure that the email you set up in git matches the email saved in your Assembla profile.
+
+git config --global user.name "Rafsan Shahrear" # Set your name
+git config --global user.email "rafsan.shahrear@gmail.com" # Set an email
+
+git config --global user.email # Verify
+# rafsan.shahrear@gmail.com
+git config --global user.name # Verify
+# Rafsan Shahrear
+    
+3. Generate and upload your SSH key
+
+Generating a new key:
+From the command prompt in Windows or Terminal in Mac OS and Linux run this command:
+ssh-keygen -t rsa -C "rafsan.shahrear@gmail.com"
+Note: This email should match the email you set up in the previous step
+You will be prompted to give the key a filename. You can accept the default name by just hitting Enter.
+You will be asked for passphrase, you usually don't need one too, you can skip this by hitting Enter.
+Copy public key (id_rsa.pub) into your Assembla Profile:
+In Windows, the key pair will appear at C:\Users\name\.ssh by default. In Mac and Linux, it will be in ~/.ssh hidden directory.
+Open the public key file (the default name is id_rsa.pub) in a text editor, such as Notepad in windows, and select all and copy (Ctrl + A followed by Ctrl + C).
+Log in to your Assembla account. Go to Profile -> Manage SSH keys and add the key.
+4. Start using Git
+
+If you are joining an existing project: Clone the repository
+If you are joining an existing project, start by cloning the repository to your local computer. To clone the repository, run the following command:
+
+git clone git@git.assembla.com:one-for-all.git
+A new directory named one-for-all will be created in the directory where you run the command. The directory will contain a full copy of the repository.
+
+If you are starting a new project: Push your code to the repository
+To push your Git tracked local directory to your empty Assembla Git repository:
+
+Add a remote pointing to the repository
+git remote add origin git@git.assembla.com:one-for-all.git
+Start using it, to push code
+git push origin master
+Hint: Rename your git repository before checking it out to have a friendly name. Go to Git Settings and update your repository tab Title and Repo Name to change your git tab and repository url to easily identifiable names.
+
+FAQ
+
+How to update tickets from commit comments
+
+You can use commit comments to link your changesets to Assembla tickets, and add comments to tickets or change their status.
+
+Use "re #4" to link your commit to ticket #4. 
+Also, "references", "refs" and "see" will add a comment to the target ticket. 
+Use "<status> #4" to set ticket #4 to the target status. For example, "Test #4" or "Fixed #4". 
+Use "<status> #tickets" or "re #tickets" to reference all affected tickets in merge request.
+
+Can I use HTTP/HTTPS instead of SSH?
+
+Yes, you can connect to your repository using http/https. The https url for the repo can be copied after clicking the https link next to the repo URL on the source tab.
+
+About Git
+
+Git is a popular version control system designed to handle very large projects with speed and efficiency; it is used mainly for various open source projects, most notably the Linux kernel. Git falls in the category of distributed source code management tools, similar to e.g. GNU Arch or Monotone (or BitKeeper in the proprietary world). Every Git working directory is a full-fledged repository with full revision tracking capabilities, not dependent on network access or a central server.
+
+Git cheat sheet - a reference to everyday commands
+Git reference site - a quick way to learn and remember git commands
+Git community book is meant to help you learn how to use Git as quickly and easily as possible
+Home / Developer API / Support Portal / System Status / Copy this space structure, repositories and members
+Get a Project
+One for all is power
