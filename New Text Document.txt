@@ -1,3 +1,6 @@
+git@github.com:TrishaDas/My-Repository.git
+
+
 Use command line to create a new repository...
 
 echo # My Project >> README.md
