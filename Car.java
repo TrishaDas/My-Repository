@@ -1,22 +1,22 @@
 /**
  * Created by user on 14/09/2015.
  */
-public class car
+public class Car
 {
     private String name;
     private String manufacturer;
-    private driver Driver;
+    private Driver driver;
     private int fuelCapacity;
-    public car(String name,String manufacturer,driver Driver,int fuelCapacity)
+    public Car(String name,String manufacturer,Driver driver,int fuelCapacity)
     {
 
         this.name=name;
-        this.Driver=Driver;
-        this.manufacturer=manufacturer;
+        this.driver=driver;
+    this.manufacturer=manufacturer;
         this.fuelCapacity=fuelCapacity;
 
     }
-    public car(String name,String manufacturer)
+    public Car(String name,String manufacturer)
     {
         this.name=name;
         this.manufacturer=manufacturer;
@@ -29,13 +29,13 @@ public class car
     {
         return fuelCapacity;
     }
-    public void setDriver(driver Driver)
+    public void setDriver(Driver driver)
     {
-        this.Driver= Driver;
+        this.driver= driver;
     }
-    public driver getDriver()
+    public Driver getDriver()
     {
-        return Driver;
+        return driver;
     }
     public String getName()
     {
@@ -58,6 +58,6 @@ public class car
     }
     public void print()
     {
-        System.out.println(name+"   Manufacturer:"+ manufacturer+"   Driver"+ Driver.getName() +"   Fuel capacity" + fuelCapacity);
+        System.out.println(name+"   Manufacturer:"+ manufacturer+"   Driver"+ driver.getName() +"   Fuel capacity" + fuelCapacity);
     }
 }

@@ -1,23 +1,23 @@
 /**
  * Created by user on 14/09/2015.
  */
-public class driver
+public class Driver
 {
     private String name;
     private int age;
     private String country;
-    public driver(String name,int age,String country)
+    public Driver(String name,int age,String country)
     {
         this.name=name;
         this.age=age;
         this.country=country;
     }
-    public driver(String name,int age)
+    public Driver(String name,int age)
     {
         this.name=name;
         this.age=age;
     }
-    public driver()
+    public Driver()
     {
 
     }
